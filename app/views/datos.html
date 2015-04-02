@@ -1,0 +1,97 @@
+<div ng-controller="DatosCtrl as datos">
+
+	<h1>DATOS</h1>
+	<p>token.access_token -> {{root.token.access_token}}</p>
+	<p>token.token_type -> {{root.token.token_type}}</p>
+	<p>token.expires_in -> {{root.token.expires_in}}</p>
+	
+	<input type="text" ng-model="root.token.access_token">
+	<br>
+	
+	<button ng-click="getEmail()">Obtener Email</button>
+	<ul>
+		<li ng-repeat="email in data.emails">
+			{{email.type}}  -> {{email.value}} 
+		</li>
+	</ul>
+
+  <br>
+	
+	<button ng-click="getDatosLogin()">Datos Login</button>
+	<p>user.displayName -> {{user.displayName}}</p>
+	<a href="https://plus.google.com/106597878195054999479">
+		<img src="{{user.image.url}}" alt="{{user.name.giveName}}" >
+	</a>
+	<p>user -> {{user}}</p>
+
+  <button ng-click="desconectar()">Desconectar</button>
+  <p>disconnectUserData -> {{disconnectUserData}}</p>
+</div>
+<!-- 
+{
+ "kind": "plus#person",
+ "etag": "\"RqKWnRU4WW46-6W3rWhLR9iFZQM/jwjLj-HKjO5bFUPYJ9G1fsQ3ygo\"",
+ "gender": "male",
+ "urls": [
+  {
+   "value": "https://profiles.google.com/106597878195054999479/buzz",
+   "type": "contributor",
+   "label": "Buzz"
+  }
+ ],
+ "objectType": "person",
+ "id": "106597878195054999479",
+ "displayName": "Oscar Pando Morales",
+ "name": {
+  "familyName": "Pando Morales",
+  "givenName": "Oscar"
+ },
+ "url": "https://plus.google.com/106597878195054999479",
+ "image": {
+  "url": "https://lh5.googleusercontent.com/-aT9_dbkKTSk/AAAAAAAAAAI/AAAAAAAAAGY/kXnbZ6WgXZ4/photo.jpg?sz=50",
+  "isDefault": false
+ },
+ "isPlusUser": true,
+ "language": "en",
+ "ageRange": {
+  "min": 21
+ },
+ "verified": false
+}
+
+-->
+<!--
+      {
+ "kind": "plus#person",
+ "etag": "\"RqKWnRU4WW46-6W3rWhLR9iFZQM/HRBzTSgR7xWB9E9qQvqSOjqVpFI\"",
+ "gender": "male",
+ "emails": [
+  {
+   "value": "oscarpando@gmail.com",
+   "type": "account"
+  }
+ ],
+ "urls": [
+  {
+   "value": "https://profiles.google.com/106597878195054999479/buzz",
+   "type": "contributor",
+   "label": "Buzz"
+  }
+ ],
+ "objectType": "person",
+ "id": "106597878195054999479",
+ "displayName": "Oscar Pando Morales",
+ "name": {
+  "familyName": "Pando Morales",
+  "givenName": "Oscar"
+ },
+ "url": "https://plus.google.com/106597878195054999479",
+ "image": {
+  "url": "https://lh5.googleusercontent.com/-aT9_dbkKTSk/AAAAAAAAAAI/AAAAAAAAAGY/kXnbZ6WgXZ4/photo.jpg?sz=50",
+  "isDefault": false
+ },
+ "isPlusUser": true,
+ "verified": false
+}
+ 
+ -->
